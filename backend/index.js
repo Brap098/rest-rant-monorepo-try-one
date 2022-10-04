@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/places', require('./controllers/places'))
 app.use('/users', require('./controllers/users'))
-app.unsubscribe('/authentication', require('./controllers/authentification'))
+app.use('/authentication', require('./controllers/authentification'))
 
 // Listen for Connections
 app.listen(process.env.PORT, () => {
